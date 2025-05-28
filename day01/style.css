@@ -42,7 +42,7 @@ margin 은 컨텐츠끼리 공백
   .stopwatch > h1  >이거 있으면 직계 자식만 */
 .stopwatch h1 {
   display: block;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 0.4em;
@@ -62,7 +62,7 @@ margin 은 컨텐츠끼리 공백
   color: #fff;
   background-color: black;
   border-radius: 2px;
-  font-family: "Press Start 2P", system-ui;
+  font-family: 'Press Start 2P', system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -72,4 +72,5 @@ margin 은 컨텐츠끼리 공백
   color: #fff;
   background-color: rgb(23, 23, 248);
   border-radius: 2px;
+  cursor: pointer;
 }

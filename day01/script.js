@@ -12,14 +12,16 @@ if ($screen && $toggleButton) {
   function clickBtn() {
     alert('호호');
   }
-
-  //   $toggleButton.addEventListener('click', () => {
-  //     alert('크크');
-  //   });
+  //   $toggleButton.addEventListener('click', clickBtn);
   //   $toggleButton.addEventListener('click', function () {
   //     alert('하하');
   //   });
-  $toggleButton.addEventListener('click', clickBtn);
+
+  $toggleButton.addEventListener('click', () => {
+    // 똑같은 작업의 값을 계속 변동 시키는거
+    stopWatchOn = !stopWatchOn;
+    console.log('stopWatchOn: ', stopWatchOn);
+  });
 }
 
 // toggleButton.addEventListener('click', () => {
