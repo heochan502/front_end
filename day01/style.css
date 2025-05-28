@@ -1,0 +1,75 @@
+body,
+h1,
+button 
+/* 태그 선택자 */ {
+  all: unset; /* 모든 마진 이나 이펙트 굵기 크기 등등 모든걸 없애는거*/
+
+  /* background-color: red; */
+}
+body {
+  /* 위치 조정을 하겠다 display // 기본적 배치는 왼쪽에서 우측 정 방향 크로스 방향등등
+  정방은 왼쪽에서우측이면 위에서 아래는 크로스 
+  자식을 조절 하는게 display*/
+  display: flex;
+  /* 정방향 출력 컨트롤 하는건 아래왼 -> 오 너 중앙에 와라 */
+  justify-content: center;
+  /* 크로스 방향에서 수정할려고 할땐 아래 구문으로 컨트롤 */
+  align-items: center;
+  height: 100vh;
+  background-color: #ddd;
+}
+
+/* 클래스 선택자 */
+.stopwatch {
+  /* 기본적으로 나자신을 컨트롤 하는것
+  block 기본적으로 부모크기를 다 차지함
+  inline 본인이 필요한 공감만 차지한다 그래서 선언하면 앞의 컨텐츠 뒤에 붙는다.즉 개행이 안되고 옆에 줄줄 붙
+  단점. 이 height width 이런식으로 크기를 조절 불가능 하다.
+  inline-block 이거는 개행이 안되고 옆에 붙었으면 좋겠다. 하지만 크기를 조절하고싶다. 
+  */
+  display: inline-block;
+  /* border 컨텐츠 경계선  컨텐츠 경계선과 안의 영역의 관련해서 여백은 padding
+margin 은 컨텐츠끼리 공백
+*/
+  padding: 48px 32px 72px 32px;
+  background-color: #fff;
+  border: 4px solid #aaa;
+  border-radius: 24px;
+  /* rgba의 a는 투명도 알파 */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* .stopwatch h1 이거는 모든 자식 선택 // 
+  .stopwatch > h1  >이거 있으면 직계 자식만 */
+.stopwatch h1 {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  color: grey;
+  margin-bottom: 16px;
+}
+
+.stopwatch_interface {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#screen {
+  padding: 8px 10px;
+  color: #fff;
+  background-color: black;
+  border-radius: 2px;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#button {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: rgb(23, 23, 248);
+  border-radius: 2px;
+}

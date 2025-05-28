@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- lang >> 속성 뒤에 "" >> 속성값 // html이나 meta head 등등은 태그 
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport 기본창 흰화면 부분이 뷰포트  content width=device-width 가 기종에 맞에 너비 자동으로 맞춘다
+    아래의 문장이 반응형 하겠다고 적어둔 내용-->
+    <!--시맨틱 태그 검색엔진에게서 잘보이기위한거 seu
+    각 구역별로 이름지정하고 여기서부터 뭐다뭐다 알려주기위한 태그 div /
+     span 등등 이런거 //시멘틱 태그자체에 의미가 있고 그의미에 따라서 검색엔진에서 우선수위가 있으며 
+     거기에 따라서 검색 상위 노출등 되긴한다. 크기 색상 위치 그런건 다 css 고 각 태그가 가지는 고유 의미가 있다.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>프론트엔드</title>
+  </head>
+  <body>
+    <!-- div 는 기본적인 성질이 block display에 block 이되어있어서 그런거지 언제든지 
+     속성은 바꿀수 있다 -->
+    <div class="stopwatch haha hoho">
+      <!--block 태그 div 웹브라우저 컨텐츠영역 포함해서 모든 영역가능 부모 크기기준// 
+        inline 태그는 컨텐츠 영역만 차지함 span
+        h1 시멘틱 태그는 글씨 크기 때문에 쓰는건아니고 문서의 제목 으로 쓰고 
+        h2 부제목 
+        h3 부부제목 
+        h4 부부부제목-->
+      <h1>yalco stopwatch</h1>
+      <div class="stopwatch_interface">
+        <!-- id는 유일한 값만 지정할수있다 // class 는 여러군데서 쓸수있다
+        동일 속성 관리할때는 class 사용해서 관리 
+        id는 유일한 값으로 설정 id뒤에 class를 또 설정 가능-->
+        <span id="screen">00:00:00</span>
+        <button id="button">▶</button>
+        <!-- <input > -->
+      </div>
+    </div>
+    <div></div>
+
+    <!-- 스크립트를 아래 추가 시키는 이유 defer<-이 속성 나온지 얼마안댐 
+     자바 스크립트는 늘 바디 맨끝 끝나기 위에적어줫다 
+     css 위에적어주는 이유는 html 구성할때 없는 부분을 못땡겨와서 문제 생김
+     css 위에 안적으면 기본 브라우저에서 제공하는 것들로 화면을 구성해버리는데 
+     그후에 밑에css 에있으면 번쩍임 현상이 있다. 그래서 css 적용된 모양으로 바로 뿌려라라는 의미로 
+     css를 위에 적어두고시작한다 그렇게 되면 화면 번쩍임이나 그런 현상이없다 
+     자바 스크립트에 호출 함수나 그런것들이 있으니 그게 없으면 문제가 생기는데 
+     defer가 쓰여있으면 맨위에 적혀있어도 맨마지막에 실행되게 된다-->
+    <script src="./script.js"></script>
+  </body>
+</html>
