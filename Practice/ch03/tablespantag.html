@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://showcases.yalco.kr/html-css/01-06/table.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>1</td>
+        <!-- col 열 기준으로 2칸 역할하게 하는 colspan -->
+        <td colspan="2">2</td>
+
+        <td>1</td>
+      </tr>
+      <tr>
+        <!--  row 행 기준으로 합치는 함수  -->
+        <td rowspan="3">3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td colspan="2" rowspan="2">4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+    </table>
+  </body>
+</html>

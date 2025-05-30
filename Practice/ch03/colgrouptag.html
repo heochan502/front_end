@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://showcases.yalco.kr/html-css/01-06/table.css"
+    />
+    <style>
+      .weekends {
+        background-color: aqua;
+      }
+      .wednesday {
+        background-color: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>colgroup.html</h1>
+    <table>
+      <thead>
+        <th scope="col">일</th>
+        <th scope="col">월</th>
+        <th scope="col">화</th>
+        <th scope="col">수</th>
+        <th scope="col">목</th>
+        <th scope="col">금</th>
+        <th scope="col">토</th>
+      </thead>
+      <colgroup>
+        <!-- td기준으로 처음 렬에 관련한부분만 강조한다ㅡ -->
+        <!--class weekend 에 따로 색상 이있어서 적용되는것이다 그 class는 저위에 링크에 포함되어있다 -->
+        <col class="weekend" />
+        <!-- span이 공간을 선택하는 정도를 뜻하는거같음아래 2 는 다섯칸에는 아무것도 안준다  -->
+        <col span="2" class="weekends" />
+        <col class="wednesday" />
+        <col span="2" class="weekends" />
+        <col class="weekend" />
+      </colgroup>
+      <tbody>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
