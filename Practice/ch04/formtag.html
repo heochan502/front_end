@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>formtag.html</h1>
+    <!-- form태그는 사용자가 작성한 데이터를 백엔드로 보낼 떄 사용
+    action 목적지(URL)  
+    method(보내는 방법): get방식, post방식
+    get : 목적지 URL에 데이터를 실어서 보낸다. 그래서 내용이 보인다.
+            데이터는 퀘리 스트링(Query String, Parameters)으로 표현한다.
+    post : Request는 헤더, 바디로 이루어져 있는데 body에 데이터를 담아서 보내는 방식.
+            그래서 표면상 내용이 보이지 않는다.
+            쿼리스트링: url?key=value1&key2=value2
+            ?시작, 속성명=속성값으로 구성, 속성끼리 구분은 &로 한다.-->
+    <form action="./01-result.html" method="get">
+        <!-- label 로 묶어주는 기능 이름 을 누르면 뒤에 input 으로 넘어간다 
+        위에선 for 로 name 이라는 id 준거 떙겨온거고 없이 그냥 감싸주면 문제없다.
+        value 하면 기본적으로 입력된값-->
+    <label for="name">이름</label>
+    <input type="text" id="name" name="mu-name" value="홍길동"/>
+    <br /><br />
+    <label >나이
+    <input type="number" id="age" name="my-age" />
+    </label>
+    <br /><br />
+    <label>비밀번호 <input type="text" name="pw" ></label>
+    <br /><br />
+    <input type="submit" value="제출" />
+    <input type="reset" value="초기화"></input>
+    </form>
+</body>
+</html>
