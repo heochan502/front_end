@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      input[type='range'] {
+        width: 200px;
+        background-color: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>숫자 관련 인풋 타입</h1>
+    <!-- form 은 백엔드로 데이터를 보낼떄 디폴트는 get방식 action에다가 #이면 나자신 -->
+    <!-- 유효성 검사-->
+    <!-- 주소창에 ? 으로 시작하는데 쿼리 스트링 또있다 하면 앤드로 진행 됨
+      ? 시작 &으로 연결-->
+    <form action="#">
+      <div>
+        <label
+          >number: <input type="number" name="pnum" min="20" max="200"
+        /></label>
+      </div>
+      <div>
+        <label
+          >range: <input type="range" name="price" min="20" max="80" step="5" />
+          <span id="range_display">50</span>
+        </label>
+      </div>
+      <div>
+        <lebel>
+          <!-- <input type="date" name="birth_date" min="2025-06-03" /> -->
+          <input type="date" name="birth_date" min="2025-06-03" />
+        </lebel>
+      </div>
+      <input type="submit" value="확인" />
+    </form>
+    <script>
+      // 아래는 css 선택자
+      const $range = document.querySelector('input[type="range"]');
+      //const $rangeDisplay = document.querySelector('span[id="range_display"]') ;
+      const $rangeDisplay = document.querySelector('#range_display');
+      const $date = document.querySelector(
+        'input[type="date"][name="birth_date"]'
+      );
+      $date.value = '2025-06-02';
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      //   const tomorrow = new Date(today.getDate()+1);
+
+      const year = tomorrow.getFullYear();
+      const mon = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const day = String(tomorrow.getDate()).padStart(2, '0');
+      //   $date.value = `${year}-0${mon}-0${day}`;
+      const nowDate = `${year}-${mon}-${day}`;
+      $date.value = nowDate;
+      //   $date.setAttribute('min', nowDate);
+      console.log('nowDate: ', nowDate);
+
+      // function(e) e는 모든 이벤트 값이 들어온다.앞의 $대상자에 대한 데이터도 들어온다. 랑 아래 화살표 함수랑 같
+      $range.addEventListener('change', function (e) {
+        // 커서를 놓으면 값이 나오는
+        $rangeDisplay.innerText = e.target.value;
+      });
+    </script>
+  </body>
+</html>
