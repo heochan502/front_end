@@ -35,6 +35,20 @@
           <input type="date" name="birth_date" min="2025-06-03" />
         </lebel>
       </div>
+      <div>
+        <!-- '2025-10-10T14:12:12' -->
+        <label
+          >datetime:
+          <input
+            type="datetime-local"
+            name="birth_datetime"
+            min="2025-06-02T10:10:10"
+          />
+        </label>
+      </div>
+      <div>
+        <label>week:<input type="week" name="brith_week" /> </label>
+      </div>
       <input type="submit" value="확인" />
     </form>
     <script>
@@ -56,8 +70,14 @@
       //   $date.value = `${year}-0${mon}-0${day}`;
       const nowDate = `${year}-${mon}-${day}`;
       $date.value = nowDate;
-      //   $date.setAttribute('min', nowDate);
+      // 과거가 선택안되게 설정하는 어트리 뷰트
+      $date.setAttribute('min', nowDate);
+      $date.setAttribute('max', '2025-06-05');
       console.log('nowDate: ', nowDate);
+      0;
+
+      const $datetime = document.querySelector('input[type="datetime-local"]');
+      $datetime.value = '2025-10-10T14:12:12';
 
       // function(e) e는 모든 이벤트 값이 들어온다.앞의 $대상자에 대한 데이터도 들어온다. 랑 아래 화살표 함수랑 같
       $range.addEventListener('change', function (e) {

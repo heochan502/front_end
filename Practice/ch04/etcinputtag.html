@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>기타 인풋 타입</h1>
+    <form action="#">
+      <div>
+        <label>on-file: <input type="file" /> </label>
+      </div>
+      <div>
+        <label>
+          <!-- image/* 이런식은 해당 관련 파일들만 보이는것 위는 모든 파일 다 보이는 것 -->
+          on-file(파일형식): <input type="file" accept="image/*" />
+        </label>
+      </div>
+      <div>
+        <label>
+          <!-- image/* 이런식은 해당 관련 파일들만 보이는것 위는 모든 파일 다 보이는 것 -->
+          excel-file(파일형식):
+          <input type="file" accept=".xls, .xlsx , image/*" />
+        </label>
+      </div>
+      <div>
+        <!-- 아래는 여러개의 파일을 동시에 선택하고 보내려고 -->
+        <label
+          >multiple-file: <input type="file" accret="image/*" multiple />
+        </label>
+      </div>
+      <div>
+        <!-- pattern: 정규표현식 사용 -->
+        <!-- autofocus 페이지 열리면 바로 커서 가 이동함 -->
+        <label> M: <input type="tel" name="phone" autofocus /> </label>
+      </div>
+      <div>
+        <!-- value 는 첫페이지가 열렸을떄 ! 딱 보이는 값 -->
+        <label>
+          email:
+          <input type="email" name="email" required value="example@email.com"
+        /></label>
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+    </form>
+  </body>
+</html>

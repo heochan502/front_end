@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>체크 관련 인풋 타입</h1>
+    <form action="#">
+      <div>
+        <label><input type="checkbox" name="typ" value="1" />유기농</label>
+      </div>
+      <div>
+        <label
+          ><input type="checkbox" name="typ" value="2" checked />무농약</label
+        >
+      </div>
+      <div>
+        <!-- 레이블로 감싸주어서 그 영역 전체에 클릭하면 그 해당 칸이나 버튼이나 그런것들에 커서가 가도록 만들어야함 -->
+        <!-- radio 버튼에서 이름을 동일 선상에 둬야한다 이름이 다르면 그룹으로 안묶여서 
+         다중 선택이가능해져버린다 -->
+        <label
+          ><input type="radio" name="fruit" value="apple" checked />사과</label
+        >
+        <label><input type="radio" name="fruit" value="grap" />포도</label>
+        <label><input type="radio" name="fruit" value="orange" />오렌지</label>
+      </div>
+      <div><input type="submit" value="전송" /></div>
+    </form>
+  </body>
+</html>
