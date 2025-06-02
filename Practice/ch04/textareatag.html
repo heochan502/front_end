@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>textarea.html</h1>
+    <form action="">
+      <div>
+        <!-- 아래의 for로 id 입력하면 해당 지역 이벤트 일어나면 자동으로 해당 id 부분으로 커서가 이동하는거  -->
+        <label for="msg">메시지를 입력하세요</label>
+      </div>
+      <div>
+        <!-- textarea 는 value라는 값이 없어서 초기값 설정을 태그로 하는게 아니고 태그 사이에 값을 넣어주면 자동으로보인다 -->
+        <!-- 아래처럼 해두고  msg.value 로 값을 추출하거나 입력을 하면 안의 값이 변경된다.
+         attribute value는 없는데 property value는 존재한다  -->
+        <textarea id="msg" name="msg">안녕하세요.</textarea>
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+    </form>
+    <script>
+      const $msg = document.querySelector('#msg');
+      alert($msg.value);
+    </script>
+  </body>
+</html>

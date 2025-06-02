@@ -30,6 +30,7 @@
           >multiple-file: <input type="file" accret="image/*" multiple />
         </label>
       </div>
+      <div><input type="hidden" name="name" value="홍길동" /></div>
       <div>
         <!-- pattern: 정규표현식 사용 -->
         <!-- autofocus 페이지 열리면 바로 커서 가 이동함 -->
@@ -39,8 +40,27 @@
         <!-- value 는 첫페이지가 열렸을떄 ! 딱 보이는 값 -->
         <label>
           email:
-          <input type="email" name="email" required value="example@email.com"
+          <!-- hidden 은 사용자에게 안보이고 백엔드에게 데이터 줄떄 사용 하고
+           readonly는 사용자에게 보여주면서 백엔드에게 데이터 줄떄사용입력 수정은 안댐 -->
+          <input
+            type="email"
+            name="email"
+            required
+            value="example@email.com"
+            readonly
         /></label>
+      </div>
+      <div>
+        <label>
+          email2:
+          <input
+            type="email"
+            name="email2"
+            required
+            value="example222@email.com"
+            disabled
+        /></label>
+        <!-- 위 disabled 는 보이지만 데이터 안날아가고 데이터 수정도 불가 -->
       </div>
       <div>
         <input type="submit" value="전송" />
