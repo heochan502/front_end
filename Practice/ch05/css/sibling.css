@@ -1,8 +1,18 @@
 /* section {
   color: beige;
 } */
+/* 꼭밑으로 있어야한다 앞에 있는 태그 기점으로 밑에 있는거 선택하는거같은 레벨에서만 가능  */
 /* 인접 형제 선택자 (adjacent selector */
+/* 바로 밑에 있어야 선택가능하고 바로 밑에 없으면 선택이 되지않음 */
 h1 + p {
   background-color: #222;
   color: #fff;
+}
+
+h1 ~ p {
+  color: blue;
+}
+
+.starter ~ li {
+  font-style: italic;
 }

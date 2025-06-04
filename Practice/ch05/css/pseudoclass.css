@@ -18,3 +18,33 @@
 .starter ~ li {
   font-style: italic;
 }
+ol li:first-child,
+ol li:last-child {
+  color: yellowgreen;
+}
+/* 부정 선택자 */
+.outer > :not(:last-child) {
+  background-color: bisque;
+}
+
+ul li {
+  font-weight: bold;
+}
+
+ol :nth-child(3) {
+  font-weight: bold;
+  color: deeppink;
+}
+ol :nth-child(even) {
+  background-color: bisque;
+}
+/* ol :nth-child(2n) {
+  background-color: bisque;
+}
+ol :nth-child(2n + 2) {
+  background-color: rgb(206, 126, 28);
+} */
+
+ol :nth-child(odd) {
+  background-color: cadetblue;
+}

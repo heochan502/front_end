@@ -1,0 +1,19 @@
+/* .parent > span:first-child {
+  background: lightgreen;
+}
+
+.parent2 > p:first-child {
+  background: lightblue;
+} */
+/* first-child 는 무조건 처음 아이 선택해서 위에 내용으로는 p태그가 선택 되지않음 
+ */
+.parent > :first-child {
+  background: lightgreen;
+}
+.parent p:first-of-type {
+  background: steelblue;
+}
+/* 각 구분 자 div태그 해당 구역별로 처음 아이들 관여함 */
+.parent2 :first-of-type {
+  background-color: steelblue;
+}
