@@ -1,15 +1,37 @@
 body {
   background-color: rgb(238, 226, 210);
 }
-
+/* 클래스 선택자가 헤드 선택자 보다 우선순위가 높다 */
 span {
   color: plum;
 }
 
 span {
-  color: steelblue;
+  color: pink;
 }
 
 div {
   color: olivedrab;
+}
+#red {
+  color: red;
+}
+div.blue {
+  color: red;
+}
+div.blue.dark {
+  color: green;
+}
+
+.blue.dark {
+  color: grey;
+}
+.blue {
+  color: rgb(18, 16, 32);
+}
+
+span,
+.dark,
+#red {
+  text-decoration: underline;
 }

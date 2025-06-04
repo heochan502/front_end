@@ -1,0 +1,20 @@
+/* 하위 선택자 (descendant selector) */
+.outer li {
+  color: olivedrab;
+}
+
+/* .outer > li li {
+  color: olivedrab;
+} */
+/* 자식선택자 (child selector)*/
+.outer > li {
+  color: dodgerblue;
+}
+.outer > li ul {
+  /* color: olivedrab; */
+  text-decoration: underline;
+}
+
+.starter ~ li {
+  font-style: italic;
+}
