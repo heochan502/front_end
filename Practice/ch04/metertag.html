@@ -10,7 +10,12 @@
     <!-- 태그 사이에서 적은거는 시각장애인을 위한 리더기 표시 값 -->
     <progress id="progressBar" max="100" value="50">50%</progress>
     <button id="prgStarBtn" type="button">시작</button>
-
+    <br /><br />
+    <h2>meter 태그</h2>
+    <!-- 20달러 라는 내용은 화면에 나오지 않는다 시각장애인용으로 읽어줄떄 적힌다 -->
+    <meter min="0" max="100" value="20" low="50" high="67" optimum="33">
+      20달러
+    </meter>
     <script>
       const $progressBar = document.querySelector('#progressBar');
       const $prgStarBtn = document.querySelector('#prgStarBtn');
