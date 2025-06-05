@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container01 {
+        background-color: antiquewhite;
+      }
+      .container01 > div,
+      .container02 > div {
+        width: 100px;
+        height: 100px;
+        padding: 40px;
+        background-color: brown;
+        border: 1px solid#000;
+      }
+      /* 위에는 박스크기도 100 에 따로 패딩 마진 보더 까지 다들어가서 182 정도 크기나 나옴 */
+      /*  */
+      .container02 > div {
+        box-sizing: border-box;
+      }
+
+      .container02 {
+        background-color: cadetblue;
+        margin-top: 2rem;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container01">
+      <div>div1</div>
+      <div>div2</div>
+      <div>div3</div>
+    </div>
+
+    <div class="container02">
+      <div>div1</div>
+      <div>div2</div>
+      <div>div3</div>
+    </div>
+  </body>
+</html>
