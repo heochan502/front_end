@@ -1,0 +1,15 @@
+span {
+  background-color: steelblue;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.container div {
+  background-color: coral;
+}
+span,
+.container div {
+  margin: 20px;
+}

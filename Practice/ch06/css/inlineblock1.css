@@ -1,0 +1,16 @@
+ul > li {
+  background-color: antiquewhite;
+  display: inline-block;
+  margin-right: 2em;
+}
+/* 위는 오른쪽에 32px 로 마진이 들어간다  */
+/* border(경계선)일 기준으로 안쪽 여백주는거 padding 
+border(경계선) 경계 기준으로 밖에 여백주는거 margin */
+
+ul {
+  background-color: blue;
+}
+
+.case02 li:last-child {
+  margin-right: 0px;
+}

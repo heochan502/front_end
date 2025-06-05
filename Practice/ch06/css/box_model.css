@@ -1,0 +1,43 @@
+body {
+  /* background-color: aqua; */
+}
+
+div {
+  background-color: steelblue;
+}
+span {
+  background-color: orange;
+}
+
+.container {
+  background-color: #fff;
+}
+
+/* <!-- inlin은 한줄인데 보여지는 공간이없으면 내려간다 좌우 마진은 줄수있어도 위아래는 못준다 --> */
+
+.container div {
+  background-color: coral;
+  display: inline;
+  width: 200px;
+}
+
+.container :first-child {
+  background-color: aqua;
+}
+
+.container :nth-child(2) {
+  color: blue;
+}
+
+/* .container :first-of-type {
+  color: blue;
+} */
+
+/* div :first-child {
+  background-color: aqua;
+} */
+.inline_block {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
