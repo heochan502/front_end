@@ -1,0 +1,13 @@
+div {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+/* pixel은 고정값 */
+html {
+  font-size: 16px;
+}
+.font-rem {
+  /* 부모에비해서 1.2배 커지는거 rem */
+  font-size: 1.2rem;
+}
