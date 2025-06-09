@@ -9,16 +9,58 @@
 header {
   /*  아래는 viewport에 고정해둔것 */
   position: fixed;
-  background-color: gray;
-  left: 0;
+  top: 0px;
   right: 0;
-  height: 80px;
-  color: #fff;
+  left: 0;
   display: flex;
-  justify-self: center;
+  height: 60px;
+  color: #fff;
+  background-color: gray;
+  justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 header h1 {
   font-size: 1.7em;
+}
+
+main {
+  /* 자식중에 무조건 위치 이동하는걸 만들겟다고 하는것 */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 300vh;
+  margin-top: 90px;
+  align-items: start;
+}
+
+.one {
+  width: 60%;
+  height: 100vh;
+}
+
+.one > img {
+  width: 100%;
+  display: block;
+}
+
+.two {
+  background-color: aliceblue;
+  width: 40%;
+  /* 자식의 크기가 크면 자동으로 스크롤 만들어준다.\ */
+  overflow: auto;
+  position: sticky;
+  height: 50vh;
+  top: 0;
+  padding: 70px 0 0 12px;
+  text-align: center;
+}
+
+.three {
+  position: sticky;
+  top: 0;
+  background-color: bisque;
+  height: 100px;
+  padding-top: 100px;
 }
