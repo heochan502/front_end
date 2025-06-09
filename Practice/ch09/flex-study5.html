@@ -14,10 +14,10 @@
       .container {
         background-color: gray;
         height: 400px;
-        width: 500px;
+        /* width: 500px; */
         /* 인라인 플랙스 주면 부모도 인라인이 된다 */
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         /*이게 기본값 : justify-content: flex-start; */
         /* content가 중간으로옴 justify-content: center; */
 
@@ -25,19 +25,36 @@
         /* 자식 약옆에 여백을 주는데 겹치면 겹치는만큼 넓어진다 justify-content: space-around; */
 
         /* 모든 간격을 동일하게 컨텐츠 배치 justify-content: space-evenly; */
-        justify-content: space-evenly;
-        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        /* 아래는 item은 여백이 생기면서 만들어진다 */
+        /* align-items: center; */
+        /* 아래는 warp을 줘야 작동하고 아래위로 여백없이 달라붙고  */
+        /* align-content: space-evenly;
+         */
+        /*  위의 justify-content 에서 space between 은 gap 안먹한다 */
+        gap: 10px;
       }
       .container > div {
         background-color: steelblue;
         color: white;
         /*  줄다줄다 줄다 48px 이하로는 안줄겟다 그래서 스크롤이 생기겟다  그게 min  max 또한 같*/
-        height: 20px;
+        /* height: 20px; */
 
         min-width: 48px;
         min-height: 48px;
         padding: 10px;
         border: 1px solid #fff;
+      }
+      .container > div:first-child {
+        background-color: tomato;
+        /* 커지는 배율설정 화면 가득하게 채우는건데 숫자가 클수록 배율 적용해서 먼저 커짐 */
+        flex-grow: 2;
+      }
+      .container > div:nth-child(2) {
+        background-color: violet;
+
+        flex-grow: 2;
       }
     </style>
     <title>Document</title>
@@ -45,10 +62,12 @@
   <body>
     <h1>flex-study.html</h1>
     <div class="container">
+      <div>이 아이템을 조절 해 보세요</div>
+      <div>이 아이템을 조절 해 보세요</div>
       <div>1</div>
-      <div>2</div>
+      <!-- 순서를 지정 할 수 있다                                                                    -->
+      <div style="order: -1">2</div>
       <div>3</div>
-      <div>4</div>
     </div>
     <span>안녕하세요. </span>
   </body>
