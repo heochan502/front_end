@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* margin: 0; */
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        margin-top: 20px;
+      }
+      .div-a {
+        left: 20px;
+      }
+      .div-b {
+        left: 20px;
+        /* 기본적인 위치는 static 이라서 위치 조정이 안됨 
+        하지만 아래처럼 position relative를 주면 위치 조정이됨 
+        relative는 static이었을 때의 위치에서 위치 조정이된다
+        왼쪽으로 위치 하고 싶을떄*/
+        top: 5px;
+        position: relative;
+      }
+      .div-c {
+        right: -10px;
+        bottom: -10px;
+        margin-bottom: 0;
+
+        /* top: 5px; */
+        /* relative랑 비슷하게 absolute도static인 위치를 조정 가능해진다  
+        하지만 absolute는 제일 먼저 하는건 부모를 찾는다 static이 아닌 부모 
+        그렇다 보니 위치 조정이 될때 static이 아닌 부모 기준으로 위치 조정이된다
+        만약 static이 아닌 부모가 없다면 viewport(html)가 부모가 된다.
+        모든위치 다 주고싶을때 */
+        /* top: px; */
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>position2.html</h1>
+
+    <div class="div-a">A</div>
+    <div class="div-b">B</div>
+    <div
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        position: relative;
+      "
+    >
+      <!-- div 로 감싸도 부모가 static 이라서 그 상위  viewport 를 기준으로 잡는다 
+       위에 position relative 주니까 위의 div를 범위로 잡고 그 기준으로 이동한다
+       저런식으로div 선언안하고 그냥 div 사용하면 static 으로 된다-->
+      <div class="div-c">C</div>
+    </div>
+  </body>
+</html>
