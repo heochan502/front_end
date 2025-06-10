@@ -33,12 +33,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-grow 남는공간 1배율로 다 먹겟다  */
   flex-grow: 1;
 }
 
 #content {
   padding: 24px;
   background-color: skyblue;
+  /* justify-content: */
 }
 
 #footer {
