@@ -18,3 +18,9 @@ const copySum= sum;
 copySum(1,2);
 
 console.log('sum===copySum', sum === copySum);
+
+console.log('void 함수: ', sum(10,20));
+
+
+sum(1,2);
+sum(5,6,7);
