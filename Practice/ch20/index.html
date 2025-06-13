@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>yalco</title>
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
 
+  <!-- defer 이거는 맨나중에 읽읆 모든 html 다 컴파일하고 맨나중에 compile 함 -->
+  <script defer src="./script.js"></script>
 </head>
-<body>
 
+<body>
   <section class="intro">
     <div class="intro__dark">
       <div class="intro__type">
@@ -26,12 +29,12 @@
   <header class="header">
     <h1>
       <a class="header__homelink" href="#">
-        <img class="header__logo" src="./images/logo.svg" alt="홈으로">
+        <img class="header__logo" src="./images/logo.svg" alt="홈으로" />
       </a>
     </h1>
 
     <!-- 버튼으로 수정 -->
-    <button class="header__menu-btn"></button>
+    <button class="header__menu-btn "></button>
     <nav class="header__nav">
       <ul>
         <!-- 기존 코드 -->
@@ -55,15 +58,10 @@
   </header>
 
   <main>
-
     <section id="about" class="section">
       <header class="section__header">
-        <strong class="section__tag">
-          about
-        </strong>
-        <h1 class="section__title">
-          얄코강좌는
-        </h1>
+        <strong class="section__tag"> about </strong>
+        <h1 class="section__title">얄코강좌는</h1>
       </header>
 
       <div class="about">
@@ -99,31 +97,26 @@
           </p>
         </div> -->
       </div>
-
     </section>
 
     <section id="html" class="section">
       <header class="section__header">
-        <strong class="section__tag">
-          html
-        </strong>
-        <h1 class="section__title">
-          갖다 놓는 HTML
-        </h1>
+        <strong class="section__tag"> html </strong>
+        <h1 class="section__title">갖다 놓는 HTML</h1>
       </header>
       <article class="html-css _html">
         <figure class="html-css__thumb">
-          <img class="html-css__logo" src="./images/logo-html.svg" alt="HTML 로고">
+          <img class="html-css__logo" src="./images/logo-html.svg" alt="HTML 로고" />
         </figure>
         <div class="html-css__content">
           <h2 class="html-css__title">
             <div>
-              <em>H</em>yper<em>T</em>ext <br>
+              <em>H</em>yper<em>T</em>ext <br />
               <em>M</em>arkup <em>L</em>anguage
             </div>
           </h2>
           <p class="html-css__desc">
-            <strong>태그</strong>를 사용하여 웹페이지 안의 요소들과 <br>
+            <strong>태그</strong>를 사용하여 웹페이지 안의 요소들과 <br />
             그 구조를 표현할 수 있는 언어입니다.
           </p>
           <dl class="html-css__spec">
@@ -140,26 +133,22 @@
 
     <section id="css" class="section">
       <header class="section__header">
-        <strong class="section__tag">
-          css
-        </strong>
-        <h1 class="section__title">
-          꾸미는 CSS
-        </h1>
+        <strong class="section__tag"> css </strong>
+        <h1 class="section__title">꾸미는 CSS</h1>
       </header>
       <article class="html-css _css">
         <figure class="html-css__thumb">
-          <img class="html-css__logo" src="./images/logo-css.svg" alt="CSS 로고">
+          <img class="html-css__logo" src="./images/logo-css.svg" alt="CSS 로고" />
         </figure>
         <div class="html-css__content">
           <h2 class="html-css__title">
             <div>
-              <em>C</em>ascade <br>
+              <em>C</em>ascade <br />
               <em>S</em>type <em>S</em>heet
             </div>
           </h2>
           <p class="html-css__desc">
-            웹페이지 요소에 각종 속성을 부여하여 <br>
+            웹페이지 요소에 각종 속성을 부여하여 <br />
             다양하게 <strong>스타일링</strong>할 수 있는 언어입니다.
           </p>
           <dl class="html-css__spec">
@@ -176,12 +165,8 @@
 
     <section id="curriculum" class="section">
       <header class="section__header">
-        <strong class="section__tag">
-          curriculum
-        </strong>
-        <h1 class="section__title">
-          커리큘럼
-        </h1>
+        <strong class="section__tag"> curriculum </strong>
+        <h1 class="section__title">커리큘럼</h1>
       </header>
       <div class="curriculum">
         <ol class="curriculum__list">
@@ -202,22 +187,17 @@
 
     <section id="contact" class="section">
       <header class="section__header">
-        <strong class="section__tag">
-          contact
-        </strong>
-        <h1 class="section__title">
-          문의하기
-        </h1>
+        <strong class="section__tag"> contact </strong>
+        <h1 class="section__title">문의하기</h1>
       </header>
       <div class="contact">
         <div class="contact__tab">
-          <input name="contact" type="radio" id="ct_1" checked>
+          <input name="contact" type="radio" id="ct_1" checked />
           <label for="ct_1" class="sr-only">연락처</label>
-          <input name="contact" type="radio" id="ct_2">
+          <input name="contact" type="radio" id="ct_2" />
           <label for="ct_2" class="sr-only">메시지</label>
           <!-- contact__slides의 원래 위치 -->
         </div>
-
 
         <!-- contact__slides의 위치 이동 -->
         <div class="contact__slides">
@@ -225,12 +205,14 @@
             <div class="contact__slide">
               <address>
                 <table class="contact__contacts">
-                  <caption class="sr-only">연락처 목록</caption>
+                  <caption class="sr-only">
+                    연락처 목록
+                  </caption>
                   <tr>
                     <th>유튜브</th>
                     <td>
                       <a href="https://www.youtube.com/c/얄팍한코딩사전" target="_blank" alt="새 창에서 열기">
-                        <img src="./images/youtube.svg" alt="">
+                        <img src="./images/youtube.svg" alt="" />
                         채널 바로가기
                       </a>
                     </td>
@@ -246,9 +228,7 @@
                   <tr>
                     <th>이메일</th>
                     <td>
-                      <a href="mailto:yalco@kakao.com">
-                        yalco@kakao.com
-                      </a>
+                      <a href="mailto:yalco@kakao.com"> yalco@kakao.com </a>
                     </td>
                   </tr>
                 </table>
@@ -259,7 +239,7 @@
                 <div class="contact__leave">
                   <textarea name="message" placeholder="메시지를 입력하세요." required></textarea>
                   <div>
-                    <input name="email" type="email" placeholder="메일주소를 입력하세요." required>
+                    <input name="email" type="email" placeholder="메일주소를 입력하세요." required />
                     <button type="submit">남기기</button>
                   </div>
                 </div>
@@ -267,17 +247,13 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
   <footer>
     <h1 class="sr-only">Copyright</h1>
-    <p>
-      2022 yalco - All rights reserved
-    </p>
+    <p>2022 yalco - All rights reserved</p>
   </footer>
-  
 </body>
+
 </html>
