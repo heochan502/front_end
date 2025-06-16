@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ICON EDITOR</h1>
+    <div id="editor"> </div>
+    <script>
+        function makeElement(name, attributes) {
+            const node = document.createElement(name);
+            if (attributes) {
+                for (const item in attributes) {
+                    if (attributes.hasOwnProperty(item)) {
+                        node.setAttribute(item, attributes[item]);
+                    }
+                }
+            }
+            return node;
+        }
+        // document.body.appendChild(makeElement('div', { class: 'kkk' }));
+        function createIconEditor(target, nx, ny) {
+            console.log('createIconEditor 호출 !!', target, nx, ny);
+        }
+        window.addEventListener('load', () => {
+            const target = document.querySelector('#editor');
+            createIconEditor(target, 20, 20);
+        });
+
+    </script>
+
+</body>
+
+</html>
