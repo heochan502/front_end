@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    table {
+        border-collapse: collapse;
+        margin-top: 5px;
+    }
+
+    td {
+        width: 15px;
+        height: 15px;
+        border: 1px solid gray
+    }
+</style>
+
 
 <body>
-    <h1>ICON EDITOR</h1>
+    <h1>ICON EDITOR2</h1>
     <div id="editor"> </div>
     <script>
         function makeElement(name, attributes) {
@@ -24,12 +37,45 @@
         }
         // document.body.appendChild(makeElement('div', { class: 'kkk' }));
         function createIconEditor(target, nx, ny) {
-            console.log('createIconEditor 호출 !!', target, nx, ny);
+            console.log('createIconEditor 호출 !! : ', target, nx, ny);
+
+            const $inputColor = makeElement('input', { type: 'color' });
+            target.appendChild($inputColor);
+
+            const $inputButtonClear = makeElement('input', { 'type': 'button', 'value': '전체 삭제' });
+            target.appendChild($inputButtonClear);
+            $inputButtonClear.addEventListener('click', () => {
+                // $table.style.backgroundColor = black;
+                //alert('전체 삭제');
+                for (const $tr of $table.children) {
+                    for (const $td of $tr.children) {
+                        $td.style.backgroundColor = null;
+                    }
+                }
+            })
+
+            const $table = makeElement('table');
+            target.appendChild($table);
+
+            for (let y = 0; y < nx; y++) {
+                const $tr = makeElement('tr');
+                $table.appendChild($tr);
+
+                for (let x = 0; x < nx; x++) {
+                    const $td = makeElement('td');
+                    $tr.appendChild($td);
+                    $td.addEventListener('click', () => {
+                        $td.style.backgroundColor = $inputColor.value;
+                    });
+                }
+            }
+
         }
         window.addEventListener('load', () => {
             const target = document.querySelector('#editor');
             createIconEditor(target, 20, 20);
         });
+
 
     </script>
 
