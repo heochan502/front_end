@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ICON EDITOR</h1>
+    <div id="edit"></div>
+    <script>
+        function makeElement(name, attributes)
+        {
+            const node = document.createElement(name);
+            if(attributes) {
+                // for in <- 객체임
+                // for of <- 배열임
+                for( const attr in attributes){
+                    // 
+                    if(attributes.hasOwnProperty(attr))
+                    {
+                        node.setAttribute(attr, attributes[attr]);
+                    }   
+                }
+            }
+            return node;
+        }
+    </script>
+</body>
+</html>
