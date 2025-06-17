@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ajax.html</h1>
+    <div id="container"></div>
+
+    <script>
+        // javascript 자체적으로 제공해주는 통신 객체가 있는데
+        // XMLHttpRequest, Fetch가 있으나 사용하지 않는다.
+        // Axios 라이브러리 사용
+
+        const $container = document.querySelector('#container')
+        
+        axios.get('https://picsum.photos/v2/list?page=2&limit=100')
+            .then(response => makeItems);
+
+        function makeItems(data) {
+            console.log(tiem);
+            data.forEach(item => {
+                // console.log(item);
+                const ele = makeItem(item);
+            })
+
+            function makeItem(item) {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                <img src ="${item.download_uerl}">`;
+                return div;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!--
+    <form action ="주소값"  method="">
+    </form>
+
+    방법 method 
+    - get
+    - post
+
+/board
+
+CRUD - DML - 
+c - insert (post) / board
+r - select 
+리스트(get) / board
+상세 (get) / board_detail
+
+u - update (post) /board_upd
+
+d - delete  (get) /board_del
+
+// 위가 RESTful 나오기 전에 방식
+
+RESTful 메소드
+CRUD - DML - 
+c - insert (post) / board
+r - select 
+리스트(get) / board
+상세 (get) / board/1
+
+u - update (put) /board
+d - delete  (delete) /board
+
+
+(화면) 게시판 리스트 /board
+(화면) 게시판 상세화면 /bord_detail
+(화면) 게시판 글쓰기 /board_write
+(화면) 게시판 글수정 /board_mod
+
+-->

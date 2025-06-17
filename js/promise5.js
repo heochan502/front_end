@@ -21,34 +21,30 @@ function fnA() {
 function fnB(item) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log('B');
+      console.log(item);
       resolve('C');
     }, 2000);
   });
 }
 
 function fnC(item) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(item);
-    }, 2000);
-  });
+  setTimeout(() => {
+    console.log(item);
+  }, 2000);
 }
 
 // fnA()
 //   .then((item) => fnB(item))
 //   .then((item) => fnC(item));
 
+// then, catch 를 사용하지 않고 async, await를 활용 하여 코딩할 수 있다.
+// await를 사용하려면 async 함수에서만 사용할 수 있다.
+// 위나 아래나 똑같다
 
-// then, catch 를 사용하지 않고 async, await를 활용 하여 코딩할 수 있다. 
-// await를 사용하려면 async 함수에서만 사용할 수 있다. 
-// 위나 아래나 똑같다 
-
-async function start(){
+async function start() {
   const item = await fnA();
   const item2 = await fnB(item);
   fnC(item2);
-
 }
 
 start();

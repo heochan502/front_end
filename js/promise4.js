@@ -13,6 +13,7 @@ function fnA() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('A');
+      //a를 출력하고 resolve에 있는 b를 item으로 되서 보내진다
       resolve('B');
     }, 3000);
   });
@@ -21,27 +22,26 @@ function fnA() {
 function fnB(item) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log('B');
+      console.log(item);
+      // 여기서 item인 b를 출력하고다 시 resolve로 c를 보낸다 
       resolve('C');
     }, 2000);
   });
 }
 
 function fnC(item) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(item);
-    }, 2000);
-  });
+  setTimeout(() => {
+    // 여기서 item인 c를 받아서 또 출력하고 끝
+    console.log(item);
+  }, 2000);
 }
 
 fnA()
   .then((item) => fnB(item))
   .then((item) => fnC(item));
 
-
-// then, catch 를 사용하지 않고 async, await를 활용 하여 코딩할 수 있다. 
-// await를 사용하려면 async 함수에서만 사용할 수 있다. 
+// then, catch 를 사용하지 않고 async, await를 활용 하여 코딩할 수 있다.
+// await를 사용하려면 async 함수에서만 사용할 수 있다.
 
 // async function start(){
 //   const item = await fnA();
